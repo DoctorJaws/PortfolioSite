@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+.top-header{
+    font-family: rob;
+    text-indent: 200px;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 350; /* 100-700 */
+    font-style: normal;
+    letter-spacing: 7.5px;
+}
+.bottom-header {
+    font-family: rob;
+    text-indent: 200px;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 600; /* 100-700 */
+    font-style: italic;
+}
+h1 {
+    font-family: rob;
+    text-indent: 0px;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 350; /* 100-700 */
+    font-style: normal;
+    letter-spacing: 7.5px;
+}
+
+.body-header {
+    font-family: rob;
+    text-indent: 0px;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 350; /* 100-700 */
+    font-style: normal;
+    letter-spacing: 5px;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 600; /* 100-700 */
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+/* Text Decoration is used here to remove the underline from my links in my nav bar and color is used to remove the purple default coloring */
+nav ul li a {
+    color: black;
+    padding: 24px 30px;
+    text-decoration: none;
+    
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav ul li a.active {
+    
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    margin: 40 px;
+}
+.ventra {
+  display: flex;
+  align-items: flex-start; /* aligns text to top of image */
+  gap: 30px; /* space between image and text */
+  max-width: 1200px;
+  margin: 0 auto; /* centers the whole block */
+}
+
+.ventra-image {
+  width: 400px; /* adjust as needed */
+  height: auto;
+}
+
+.ventra-body {
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+
