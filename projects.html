@@ -4,38 +4,57 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="style.css">
 
     </head>
     <body>
+    <div class="nav-bar">
         <nav>
             <ul>
-                <li> <a href="index.html">PlaceHolderLogo</a></li>
+                <li> <a href="index.html">Dylan Jones</a></li>
                 <li> <a href="about me.html">About Me</a></li>
                 <li> <a href="projects.html">Projects</a></li>
                 <li> <a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <h1 class="top-header">projects</h1>
-        <h1 class="bottom-header">UI/UX Designer & Web Designer</h1>
+    </div>
+    <main class="container">
+        <h1 class="top-header">Projects</h1>
 
-        <h1>UX Design Projects</h1>
-        <a href="ventra-redesign.html">Ventra App Redesign</a>
-        <h2>AI Steam Chat Bot Assisstant</h2>
+        <h2>UX Design Projects</h2>
+        <ul>
+            <li><a href="ventra-redesign.html">Ventra App Redesign</a></li>
+            <li><a href="sparky.html">Sparky</a></li>
+        </ul>
 
-        <h1>Graphic Design Projects</h1>
-        <h2>GD 200 and InDesign Stuff</h2>
+        <h2>Graphic Design Projects</h2>
+        <ul>
+            <li><a href="gd200.html">GD 200</a></li>
+            <li>InDesign</li>
+            <li>GD100</li>
+        </ul>
 
-        <h1>Game Projects</h1>
-        <a href="https://doctorjaws.itch.io/"
-        target="_blank"
-        rel="noopener noreferrer"> <!-- do this so the link opens in a new tab-->
-        Game Development Projects</a>
+        <h2>Web Design Projects</h2>
 
-        <h1>Misc. Design Projects</h1>
-        <h2>GD 100 Portfolio</h2>
+        <h2>Game Projects</h2>
+        <p><a href="https://doctorjaws.itch.io/" target="_blank" rel="noopener noreferrer">Game Development Projects</a></p>
+
+        <h2>Misc. Design Projects</h2>
         <h3>3D Animations</h3>
-        <h4>Any other shit i dont quite know yet</h4>
-        
+    
+    <script>
+        (function(){
+            const links = document.querySelectorAll('.nav-bar nav a');
+            const path = window.location.pathname.split('/').pop();
+            links.forEach(a=>{
+                const href = a.getAttribute('href');
+                if(href === path || (href === 'index.html' && (path === '' || path === 'index.html'))){
+                    a.classList.add('active');
+                }
+            });
+        })();
+    </script>
+
+    </main>
     </body>
     </html>
