@@ -7,6 +7,18 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
 
+    <script>
+        (function(){
+            const links = document.querySelectorAll('.nav-bar nav a');
+            const path = window.location.pathname.split('/').pop();
+            links.forEach(a=>{
+                const href = a.getAttribute('href');
+                if(href === path || (href === 'index.html' && (path === '' || path === 'index.html'))){
+                    a.classList.add('active');
+                }
+            });
+        })();
+    </script>
 </head>
 
 <body>
@@ -41,18 +53,7 @@
             lot about my body.</p>
     </main>
 
-    <script>
-        (function(){
-            const links = document.querySelectorAll('.nav-bar nav a');
-            const path = window.location.pathname.split('/').pop();
-            links.forEach(a=>{
-                const href = a.getAttribute('href');
-                if(href === path || (href === 'index.html' && (path === '' || path === 'index.html'))){
-                    a.classList.add('active');
-                }
-            });
-        })();
-    </script>
+    
 
 </body>
 
