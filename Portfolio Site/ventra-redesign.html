@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventra Redesign — Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="nav-bar">
+        <nav>
+            <ul>
+                <li> <a href="index.html">Dylan Jones</a></li>
+                <li> <a href="about me.html">About Me</a></li>
+                <li> <a href="projects.html">Projects</a></li>
+                <li> <a href="info.html">Information</a></li>
+                <li> <a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="container">
+        <h1 class="top-header">Projects</h1>
+
+        <h2 class="body-header">UX Project | Ventra App Redesign</h2>
+
+        <iframe class="responsive-iframe" src="IMG-Files/UXD210_PRESENTATION.pdf" width="100%" height="500" style="border: none;"
+            title="Embedded PDF Viewer">
+            <p>Your browser does not support PDFs. <a href="IMG-Files/UXD210_PRESENTATION.pdf">Download the PDF</a> instead.</p>
+        </iframe>
+
+        <div class="ventra">
+            <img src="IMG-Files/Prototypes_UXD210_CROPPED.jpg" class="ventra-image responsive-img" alt="Ventra prototype">
+            <p class="ventra-body"></p>
+        </div>
+
+    <script>
+        (function(){
+            const links = document.querySelectorAll('.nav-bar nav a');
+            const path = window.location.pathname.split('/').pop();
+            links.forEach(a=>{
+                const href = a.getAttribute('href');
+                if(href === path || (href === 'index.html' && (path === '' || path === 'index.html'))){
+                    a.classList.add('active');
+                }
+            });
+        })();
+    </script>
+
+    </main>
+</body>
+
+</html>

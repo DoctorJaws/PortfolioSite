@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT 130 Final - Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>American Style</h1>
+    <nav>
+        <ul>
+            <li> <a href="index.html">Home</a></li>
+            <li> <a href="clothes.html">Clothing</a></li>
+            <li> <a href="shoes.html">Shoes</a></li>
+        </ul>
+    </nav>
+    
+    <a href="cart.html">
+    <button class="cart" >
+            <i class="fa-solid fa-cart-shopping fa-flip-horizontal"></i>
+    </button>
+    </a>
+
+    <div class="cart-header">
+        <h1>Your Cart</h1>
+        <div class="cart-container">
+            <div class="cart-section">
+                <h2>Clothes</h2>
+                <div class="clothes-buttons">
+                    <button class="Bomber-Button" price="89">Classic Italian Bomber Jacket $89</button>
+                    <button class="Flannel-Button" price="65">Modern Flannel Jacket $65</button>
+                    <button class="Jean-Button" price="129">Dark Wash Collared Jean Jacket $129</button>
+                </div>
+            </div>
+        
+            <p class="subtotal-text">Subtotal: $<span id="subtotal">0.00</span></p>
+        
+            <div class="cart-section">
+                <h2>Shoes</h2>
+                <div class="shoes-buttons">
+                    <button class="Sneaker-Button" price="99">Multi Color C3 Sneaker $99</button>
+                    <button class="Suede-Button" price="69">Low Top Suede Shoes $69</button>
+                    <button class="Nike-Button" price="110">Organic Leather Nike Basketball Shoes $110</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

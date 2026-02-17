@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bears Games In The 2025-26 Season</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <style>
+        h1 {
+            color: #CA3700;
+        }
+
+        /*CSS*/
+        body {
+            background-color: #0B162A;
+        }
+
+        #map {
+            position: static;
+            height: 800px;
+            width: 800px;
+            box-sizing: border-box;
+            display: inline-block;
+            vertical-align: top;
+            border: 2px solid #CA3700;
+        }
+
+        #key {
+            position: static;
+            height: 800px;
+            width: 250px;
+            box-sizing: border-box;
+            display: inline-block;
+            vertical-align: top;
+            background-color: lightgray;
+            border: 2px solid #CA3700;
+            padding: 10px 20px 10px 20px;
+        }
+
+        li {
+            list-style: none;
+            line-height: 150%;
+        }
+
+        /* popup styles */
+        .leaflet-popup-content-wrapper {
+            border-radius: 0px;
+            background-color: lightgray;
+            color: black;
+            text-align: left;
+            width: 250px;
+            min-height: 100px;
+        }
+
+        .leaflet-popup-tip {
+            background-color: lightgray;
+        }
+
+        .leaflet-popup-close-button {
+            display: none;
+        }
+
+        /* make a class for <h3> tags inside of popup*/
+        .leaflet-popup-content-wrapper h3 {
+            margin-bottom: 0px;
+        }
+
+        /* class to style images inside of popup */
+        img.building {
+            width: 220px;
+            height: auto;
+            float: top;
+            margin-right: 10px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <!-- HTML -->
+    <h1>Bears Games In The 2025-26 Season</h1>
+    <h2><a href="../../index.html">Back to original site</a></h2>
+
+    <div id="map"></div>
+
+    <div id="key">
+        <h2>Key</h2>
+        <ul>
+            <li>
+                <img src="NFC.png" width="30" height="50" alt="NFC"> = NFC Opponents
+                <img src="AFC.png" width="30" height="50" alt="AFC"> = AFC Opponents
+                <img src="NFCNorth.png" width="30" height="50" alt="NFCNorth"> = NFC North Opponents
+
+        </ul>
+        <h2>Information</h2>
+
+        <p>
+            A map marking the locations of every stadium the Chicago Bears will play at during the 2025-26 NFL Regular Season. The Bears are coming off of a disappointing year in 2024-25 but with new head coach Ben Johnson and sophmore QB Caleb Williams. The Bears are looking to turn around their reputation and make a playoff push. 
+        </p>
+    </div>
+
+    <script>
+        //Javascript
+        var map = L.map('map').setView([39.200, -96.503],4);
+
+        // add tileLayer, maxZoom, attribution
+        L.tileLayer('https://api.maptiler.com/maps/satellite/{z}/{x}/{y}@2x.jpg?key=HHCzB2G4JyOkQMXLMVfO', {
+            maxZoom:20,
+            minZoom:3,
+            attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+        }).addTo(map);
+        //load a custom marker image
+        var football_Marker = L.icon({
+            iconUrl: "Football4.png",//spell Url and not URL
+            iconSize: [35,60],//size of the custom icon
+        })
+        var NFC_Marker = L.icon({
+            iconUrl: "NFC.png",//spell Url and not URL
+            iconSize: [35,60],//size of the custom icon
+        })
+        var AFC_Marker = L.icon({
+            iconUrl: "AFC.png",//spell Url and not URL
+            iconSize: [35,60],//size of the custom icon
+        })
+        var Division_Marker = L.icon({
+            iconUrl: "NFCNorth.png",//spell Url and not URL
+            iconSize: [35,60],//size of the custom icon
+        });
+
+
+        //add marker - Soldier Field
+        var marker1 = L.marker([41.86245, -87.61672], {icon: football_Marker}).addTo(map);
+        marker1.bindPopup('<img class="building" src="BearsHome.jpg"><h3>Soldier Field</h3>425 E McFetridge Drive, Chicago, IL<br><br>Home of the Chicago Bears. Games are played here during weeks 1, 3, 7, 10, 12, 15, 16, and 18');
+        //add marker - Ford Field
+        var marker2 = L.marker([42.340115, -83.046341], {icon: Division_Marker}).addTo(map);
+        marker2.bindPopup('<img class="building" src="LionsHome.jpg"><h3>Ford Field</h3>425 2000 Brush Street, Detriot, MI<br><br>Home of the Detriot Lions. One of the new titans of the NFC. The Bears play here during week 18.');
+        //add marker - Allegiant Stadium
+        var marker3 = L.marker([36.090794, -115.183952], {icon: AFC_Marker}).addTo(map);
+        marker3.bindPopup('<img class="building" src="RaidersHome.jpg"><h3>Allegiant Stadium</h3>3333 Al Davis Way, Paradise, NV<br><br>Home of the Las Vegas Raiders. Home of the newest Stadium in the NFL. The Bears play here during week 4.');
+        //add marker - Northwest Stadium
+        var marker4 = L.marker([38.9078, -76.8644], {icon: NFC_Marker}).addTo(map);
+        marker4.bindPopup('<img class="building" src="CommandarsHome.jpg"><h3>Northwest Stadium</h3>1600 Ring Road, Landover, MD<br><br>Home of the Washington Commanders. Losing last year on a hail mary, this is a much due revenge game. The Bears play here during week 6.');
+        //add marker - M&T Bank Stadium
+        var marker5 = L.marker([39.278035, -76.6226], {icon: AFC_Marker}).addTo(map);
+        marker5.bindPopup('<img class="building" src="RavensHome.jpg"><h3>M&T Bank Stadium</h3>1101 Russell Street, Baltimore, MD<br><br>Home of the Baltimore Ravens. Home to one of the most well rounded rosters in the league. The Bears play here during week 8. ');
+        //add marker - Paycor Stadium
+        var marker6 = L.marker([39.095087,-84.516063], {icon: NFC_Marker}).addTo(map);
+        marker6.bindPopup('<img class="building" src="BengalsHome.png"><h3>Paycor Stadium</h3>1 Paycor Stadium, Cincinnati, OH<br><br>Home of the Cincinnati Bengals. One of the worst teams in the NFL right now. The Bears play here during week 9.');
+        //add marker - U.S. Bank Stadium
+        var marker7 = L.marker([44.974, -93.258], {icon: Division_Marker}).addTo(map);
+        marker7.bindPopup('<img class="building" src="VikingsHome.jpg"><h3>U.S. Bank Stadium</h3>401 Chicago Avenue, Minneapolis, MN<br><br>Home of the Minnesota Vikings. Looking to avenge a brutal week 1 primetime loss. The Bears play here during week 11.');
+        //add marker - Lincoln Financial Field
+        var marker8 = L.marker([39.9000898, -75.168098], {icon: NFC_Marker}).addTo(map);
+        marker8.bindPopup('<img class="building" src="EagelsHome.jpg"><h3>Lincoln Financial Field</h3>1020 Pattison Avenue, Philadelphia, PA<br><br>Home of the Philadelphia Eagles. Consistently one of the top teams in the league. The Bears play here during week 13.');
+        //add marker - Lambeau Field
+        var marker9= L.marker([44.5013805, -88.0623258], {icon: Division_Marker}).addTo(map);
+        marker9.bindPopup('<img class="building" src="PackersHome.jpg"><h3>Lambeau Field</h3>1265 Lombardi Avenue, Green Bay, WI<br><br>Home of the Green Bay Packers. Our bitter NFC North rival and longest standing rivalry in the NFL. The Bears play here during week 14.');
+        //add marker - Levi's Stadium
+        var marker10 = L.marker([37.40303995, -121.96968171], {icon: NFC_Marker}).addTo(map);
+        marker10.bindPopup("<img class='building' src='49Home.jpg'><h3>Levi's Stadium</h3>4900 Marie P DeBartolo Way, Santa Clara, CA<br><br>Home of the San Franciso 49ers. A team with no real identity with all of its stars injured. The Bears play here during week 17.");
+
+        //add a custom watermark
+        L.Control.Watermark = L.Control.extend({
+            onAdd: function (map) {
+                var img = L.DomUtil.create('img');
+                img.src = 'DaBears.png';
+                img.style.width = '200px';
+                return img;
+            },
+            onRemove: function (map) { },
+        });
+
+        L.control.watermark = function (opts) {
+            return new L.Control.Watermark(opts);
+        }
+
+        L.control.watermark({ position: 'topright' }).addTo(map);
+
+
+        //add a scale - customize
+        L.control.scale({
+            metric: true,
+            imperial: true,
+            position: "bottomright", //"topleft", "topright", "bottomleft", "bottomright" 
+            maxWidth: 300 //in pixels
+        }).addTo(map);
+    </script>
+
+
+</body>
+
+</html>

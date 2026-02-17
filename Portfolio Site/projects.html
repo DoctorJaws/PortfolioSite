@@ -1,0 +1,67 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+    <div class="nav-bar">
+        <nav>
+            <ul>
+                <li> <a href="index.html">Dylan Jones</a></li>
+                <li> <a href="about me.html">About Me</a></li>
+                <li> <a href="projects.html">Projects</a></li>
+                <li> <a href="info.html">Information</a></li>
+                <li> <a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main class="container">
+        <h1 class="top-header">Projects</h1>
+
+        <h2>UX Design Projects</h2>
+        <ul>
+            <li><a href="ventra-redesign.html">Ventra App Redesign</a></li>
+            <li><a href="sparky.html">Sparky: Steam AI Assistant</a></li>
+        </ul>
+
+        <h2>Graphic Design Projects</h2>
+        <ul>
+            <li><a href="gd200.html">Graphic Design: Design Essentials</a></li>
+            <li><a href="indesign.html">InDesign Workshop</a></li>
+            <li><a href="visualdesign.html">Intro to Visual Design</a></li>
+        </ul>
+
+        <h2>Web Development Projects</h2>
+        <ul>
+            <li><a href="#">UXD 270 - WIP</a></li>
+            <li><a href="IT130/it130-final-jones/index.html">IT 130 - Final Web Design Project</a></li>
+            <li><a href="UXD225/MapAssignment/map6.html">UXD 225 - Interactive Map Assignment</a></li>
+            <li><a href="https://github.com/DoctorJaws/PortfolioSite" target="_blank" rel="noopener noreferrer">My Portfolio Site</a></li>
+        </ul>
+
+        <h2>Game Projects</h2>
+        <p><a href="https://doctorjaws.itch.io/" target="_blank" rel="noopener noreferrer">Game Development Projects</a></p>
+
+        <h2>Misc. Projects</h2>
+        <p><a href="animations.html">Animations</a></p>
+    
+    <script>
+        (function(){
+            const links = document.querySelectorAll('.nav-bar nav a');
+            const path = window.location.pathname.split('/').pop();
+            links.forEach(a=>{
+                const href = a.getAttribute('href');
+                if(href === path || (href === 'index.html' && (path === '' || path === 'index.html'))){
+                    a.classList.add('active');
+                }
+            });
+        })();
+    </script>
+
+    </main>
+    </body>
+    </html>

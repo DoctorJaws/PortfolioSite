@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+/* using background color, overflow, display, justify and align to achieve a clean look for my nav bar. The background color is well color, overflow doesn't do anything here but it can't function without it.Display is so I can customize where my items are placed. Justify content is to align is horizontally. Align is to align my content vertically to avoid my nav bar stacking. */
+nav {
+    background-color: #cfbe5f;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+/* Text Decoration is used here to remove the underline from my links in my nav bar and color is used to remove the purple default coloring */
+nav ul li a {
+    color: black;
+    padding: 24px 30px;
+    text-decoration: none;
+    
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color:white
+}
+
+nav ul li a.active {
+    background-color: #4f4924;
+    color:white;
+}
+
+body {
+    font-family: "Inconsolata", monospace;
+}
+/* Top and right are used to position my icon, Padding is used to create a certain area around my symbol. The position is fixed so it blends well with everything else */
+.cart {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 5px;
+    font-size: 20px;
+}
+.cart .fa-solid .fa-cart-shopping .fa-flip-horizontal
+{
+  display: none; 
+}
+
+
+.cart-header {
+    text-align: center;
+    font-size: 32px;
+    text-decoration: underline;
+}
+
+.cart-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 750px;
+}
+
+
+.bomber {
+    text-align: center;
+}
+
+.bomber-image {
+    max-width: 20%;
+    height: auto;
+    padding-top: 50px;
+}
+/* gap is used here to seperate certain items. I could've also used margin but gap was a little less complicated */
+.clothes-items {
+    max-width: 80%;
+    height: auto;
+    padding: 50px;
+    display: flex;
+    gap: 300px;
+
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid black;
+    background-color: #bababa;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    color: black; 
+    font-size: 18px; 
+    font-weight: bold; 
+}
+
+.clothes-items a:visited{
+    color:black;
+}
+
+.shoe-items{
+    max-width: 80%;
+    height: auto;
+    padding: 50px;
+    display: flex;
+    gap: 300px;
+
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid black;
+    background-color: #bababa;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    color: black; 
+    font-size: 18px; 
+    font-weight: bold;
+}
+
+.shoe-items a:visited {
+    color: black;
+}
+
+.flannel {
+    text-align: center;
+}
+
+.flannel-image {
+    max-width: 20%;
+    height: auto;
+    padding-top: 50px;
+}
+.jean {
+    text-align: center;
+}
+
+.jean-image {
+    max-width: 20%;
+    height: auto;
+    padding-top: 50px;
+}
+.suede {
+    text-align: center;
+}
+
+.suede-image {
+    max-width: 20%;
+    height: auto;
+    padding-top: 50px;
+}
+.nike {
+    text-align: center;
+}
+
+.nike-image {
+    max-width: 20%;
+    height: auto;
+    padding-top: 50px;
+}
+.sneaker {
+    text-align: center;
+}
+
+.sneaker-image {
+    max-width: 20%;
+    height: auto;
+    padding-top: 50px;
+}
+
+.home-items {
+    max-width: 80%;
+    height: auto;
+    padding: 50px;
+    display: flex;
+    gap: 20px;
+    
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid black;
+    background-color: #bababa;
+    
+    
+}
+
+.home-text {
+    margin-top: 25px;
+    border: 2px solid black;
+    background-color: #bababa; 
+}
+
+.cart-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px; 
+}
+/* flex direction is used here to more easily stack certain items */
+.cart-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.clothes-buttons, .shoes-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.clothes-buttons button, .shoes-buttons button {
+    width: 100%;
+}
+
+.subtotal-text {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    width: 100px;
+}

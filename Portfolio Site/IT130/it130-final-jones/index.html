@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT 130 Final - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>American Style</h1>
+    <h2><a href="../../index.html">Back to original site</a></h2>
+
+    <!-- Nav bar tages we've used before in other assignments -->
+    <nav>
+        <ul>
+            <li> <a href="index.html" class="active">Home</a></li>
+            <li> <a href="clothes.html">Clothing</a></li>
+            <li> <a href="shoes.html">Shoes</a></li>
+            
+        </ul>
+    </nav>
+    <!-- <a href> to link to other HTML Files -->
+    <a href="cart.html">
+    <!-- Classes to make it be able to specifically curate CSS Code -->
+     <!-- Button to create a button that I can link to anything, this specifically is to my shopping cart symbol -->
+    <button class="cart" >
+            <i class="fa-solid fa-cart-shopping fa-flip-horizontal"></i>
+    </button>
+    </a>
+    
+    <div class="home-items">
+        <div class="home-clothes">  
+            <!-- img src to find images I've uploaded and put them into my HTML -->
+            <a href="clothes.html"><img src="img/clothingmodel.jpg" alt="Clothing Model" height="300" width="150"></a>
+            <!-- h2 to create a larger text compared to h5 -->
+            <h2>Clothing</h2>
+            <h5>    Our made in-house clothing is made with attention to detail in mind. 
+                We quality test all of our clothing to make sure it is up to our standards, including taking care of all of the worst parts of buying clothes.
+                We give measurements of all the parts of our clothes to ensure everything fits properly. 
+                We offer custom fitting, alterations, and the measurements we supply are post wash, so you do not have to worry about your clothes shrinking on you after the first wash.
+            </h5>
+        </div>
+
+        <div class="home-shoes">
+            <a href="shoes.html"><img src="img/shoemodel.jpg" alt="Shoe Model" height="300" width="150"></a>
+            <h2>Shoes</h2>
+            <h5>    Our shoe inventory is a mix of hand-made high quality shoes and keeping an inventory of name brand shoes that we deem match our quality standard.
+                We understand that every one of our customers is not the same, especially with their feet and how they wear their shoes. We do our best to offer normal and wide sized shoes in all major sizes.
+                If we do not have what size you are looking for in our custom made shoes, we can custom order it for you. 
+                We also offer a third-party insole service to ensure that your shoes can be the most stylish and comfortable.
+
+            </h5>
+        </div>
+    </div>
+
+    <div class="home-text">
+        <div class="about-us">
+            <h2>About Us</h2>
+            <h4>American Style got its start back in 1997 in Los Angeles after being inspired by modern clothing style at that time. 
+                We found inspiration in our journey by wanting to create a certain style of apparel that we could curate to our wants and needs.
+                After finding our niche in creating outerwear and some shoes, while also providing name brand shoes that can accompany our outfits.
+                With 28 years and counting in the clothing business we are just getting started with our journey and hope to expand past online shopping into store fronts
+            </h4>
+        </div>
+
+        <div class="services">
+            <h2>Custom Services We Offer</h2>
+            <h4>We pride ourselves on putting the customer first. At American Style, we offer a multitude of services for all of our inventory. 
+                For our clothing department, we offer customizable fitting for sleeve length, torso sizing, and any general alterations you could want. 
+                Our shoe department offers similar services, for our own shoes, we can make any shoe into a wider version if needed, we also offer a third-party service for custom insoles to ensure comfort in any of our shoes.
+            </h4>
+        </div>
+    </div>
+    <!-- Connect my javascript file to all of my HTML Files -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
